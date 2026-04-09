@@ -1,6 +1,6 @@
 # 01_variables_and_types.py      # 변수와 자료형
 
-# ========== 숫자 (Integer, Float)  ========================================
+# ========== 숫자형 (Integer, Float)  ========================================
 """ 
 10 (값=데이터)
 = (대입 연산자) -> 대입 = 저장(★多) = 할당 이라고 표현한다.
@@ -33,6 +33,33 @@ print("a + 1 =", a)     # a + 1 = 6
 a += 1
 print("a +=", a, "\n")  # a += 7 
 
+
+# ========== 숫자형 (Complex 복소수)  ========================================
+'''
+Complex (복소수)
+    : 실수(real)와 허수(imaginary)로 이루어진 숫자 자료형
+
+형태
+    : a + bj ( j는 허수 단위)
+
+
+complex(실수, 허수)
+    → 복소수를 만드는 함수
+
+
+'''
+# 기본사용
+c1 = 3 + 4j
+c2 = complex(1, 2)  # 1 + 2j
+c3 = complex(3, 4)  # 3 + 4j
+
+print(c1 == c3)  # true
+print(c1.real)   # 실수 부분
+print(c1.imag)   # 허수 부분
+
+# 연산
+print(c1 + c2)
+print(c1 * c2)
 
 
 # =========== 문자열 (string) ==============================================
@@ -104,36 +131,36 @@ print(a != c)     # True
 
 
 # 리스트 (List) =============================================================
-list = [1, 0.7, 'hello', True, [1,2,3]]
+list1 = [1, 0.7, 'hello', True, [1,2,3]]
 
-list[1] = "2.5"    # f[인덱스] : 인덱스 위치의 값 변경
+list1[1] = "2.5"    # f[인덱스] : 인덱스 위치의 값 변경
 
-print(list[0])     # 인덱스 값 출력
-print(list[-1])    # 뒤에서 첫 번째 출력
-print(list[1:3])   # 1부터 2까지 출력 - 슬라이싱: [시작:끝] → 끝은 포함되지 않음
-print(list[0:-2:2])# 0부터 -2까지 2씩 뛰어서 출력
+print(list1[0])     # 인덱스 값 출력
+print(list1[-1])    # 뒤에서 첫 번째 출력
+print(list1[1:3])   # 1부터 2까지 출력 - 슬라이싱: [시작:끝] → 끝은 포함되지 않음
+print(list1[0:-2:2])# 0부터 -2까지 2씩 뛰어서 출력
 
-#list.append(100)   # append(값) : 끝에 추가
-#list.insert(0,"f") # insert(인덱스, 값) : 인덱스 위치에 값을 삽입, 기존 값들은 뒤로 밀림
-#list.remove(0.7)   # remove(값) : 배열에서 '값'과 동일한 값이 제거
-#list.pop(0)        # pop(인덱스) : '인덱스' 위치의 값을 제거하고, 그 제거된 값을 반환하는 메서드
-#list.pop()         # pop() : 리스트의 가장 마지막 요소를 제거하고 반환
-#list.extend(f)     # extend(iterable) : 리스트 끝에 iterable 전체 항목 추가. append와 달리 전체를 펼쳐서 추가함
+#list1.append(100)   # append(값) : 끝에 추가
+#list1.insert(0,"f") # insert(인덱스, 값) : 인덱스 위치에 값을 삽입, 기존 값들은 뒤로 밀림
+#list1.remove(0.7)   # remove(값) : 배열에서 '값'과 동일한 값이 제거
+#list1.pop(0)        # pop(인덱스) : '인덱스' 위치의 값을 제거하고, 그 제거된 값을 반환하는 메서드
+#list1.pop()         # pop() : 리스트의 가장 마지막 요소를 제거하고 반환
+#list1.extend(f)     # extend(iterable) : 리스트 끝에 iterable 전체 항목 추가. append와 달리 전체를 펼쳐서 추가함
 
-#print("list[1] =", list[1])
-#print("list.append(100) =", list)
-#print("list.insert(0,"list") =", list)
-#print("list.remove(0.7) =", list)
-#print("list.pop(0) =", list.pop(0), "\n그래서 list =", list)
-#print("list.extend(list) =", list)
-#print("len(list) =", len(list))        # len : 리스트 길이 : 리스트 원소의 개수
+#print("list1[1] =", list1[1])
+#print("list1.append(100) =", list1)
+#print("list1.insert(0,"list1") =", list1)
+#print("list1.remove(0.7) =", list1)
+#print("list1.pop(0) =", list1.pop(0), "\n그래서 list1 =", list1)
+#print("list1.extend(list1) =", list1)
+#print("len(list1) =", len(list1))        # len : 리스트 길이 : 리스트 원소의 개수
 
 
-list1 = [1, 2, 3]
-list2 = [4, 5]
+list2 = [1, 2, 3]
+list3 = [4, 5]
 
-print(list1 + list2)   # [1, 2, 3, 4, 5]
-print(list1 * 2)    # [1, 2, 3, 1, 2, 3]
+print(list2 + list3)   # [1, 2, 3, 4, 5]
+print(list2 * 2)    # [1, 2, 3, 1, 2, 3]
 
 # + → 연결
 # * → 반복
@@ -149,6 +176,20 @@ numbers.reverse()    # [5, 4, 3, 1, 1]
 # count(value) → 값 개수 세기
 # clear() → 전체 삭제
 
+
+# ========== Tuple (튜플) ================================================
+'''
+Tuple (튜플)
+    : 변경 불가능한(immutable) 리스트
+'''
+t = (1, 2, 3)   # 튜플 생성
+
+print(t[0])   # 접근 가능
+# t[0] = 10 ❌ (수정 불가)
+
+# 언패킹 ===============
+a, b, c = (1, 2, 3)
+print(a, b, c)
 
 
 # ========== 딕셔너리 자료형 (사전) dictionary ===========================
@@ -234,3 +275,44 @@ for c in scores:
 # 최종 결과 출력
 print(f"총점: {total}, 평균: {avg}")
 print(f"80점 이상의 개수: {count}")
+
+
+# ==========  세트 (Set) =================================================
+'''
+Set (세트)
+    : 중복 제거 + 순서 없음
+'''
+s = {1, 2, 3, 3}
+print("set 실행 =", s)   # set 실행 = {1, 2, 3}
+
+s.add(4)      # 추가
+s.remove(2)   # 삭제
+
+print("set 실행 =", s)   # set 실행 = {1, 3, 4}
+
+
+a = {1, 2, 3}
+b = {3, 4, 5}
+5
+print(a & b)  # 교집합 -> 결과 : {3}
+print(a | b)  # 합집합 -> 결과 : {1, 2, 3, 4, 5}
+print(a - b)  # 차집합 -> 결과 : {1, 2}
+
+
+# 예시
+numbers = [1, 1, 2, 3, 3]
+print(list(set(numbers)))   # [1, 2, 3]
+
+
+# ==========  자료형 변환 (Type Casting) =========================================
+print(int("10"))
+print(float("3.14"))
+print(str(100))
+print(bool(0))     # False
+print(bool(1))     # True
+
+print(list("abc"))   # ['a', 'b', 'c']
+
+int("10")    # 가능
+# int("abc") ❌ 에러
+
