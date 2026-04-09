@@ -5,7 +5,7 @@
 
 ---
 
-## 📂 저장소 구성
+## 📂 프로젝트 구조
 ```
 python_basic/
 │
@@ -14,7 +14,7 @@ python_basic/
 ├─ 02_operators.py                # 연산자 정리
 ├─ 03_control_statements.py       # 제어문 (조건문, 반복문)
 ├─ 04_functions.py                # 함수, lambda
-├─ 05_file_and_modules.py         # 파일 입출력, 모듈
+├─ 05_file_io_and_modules.py      # 파일 입출력, 모듈
 ├─ 06_exceptions.py               # 예외 처리
 └─ README.md
 ```
@@ -67,15 +67,14 @@ python_basic/
 
 ### 자료형 & 변수
 ```
-■ 숫자 (Integer, Float) ✅  
-□ 숫자 (Complex)  
-■ 문자열 (String) ✅  
-■ 불리언 (Boolean) ✅  
-■ 리스트 (List) ✅  
-□ 튜플 (Tuple)  
-■ 딕셔너리 (Dictionary)   ✅
-□ 세트 (Set)  
-□ 자료형 변환 (int(), float(), str(), bool(), list() 등)  
+■ 숫자 (Integer, Float, Complex) ✅
+■ 문자열 (String) ✅
+■ 불리언 (Boolean) ✅
+■ 리스트 (List) ✅
+■ 튜플 (Tuple) ✅
+■ 딕셔너리 (Dictionary) ✅
+■ 세트 (Set) 
+■ 자료형 변환 (int(), float(), str(), bool(), list() 등)  
 ■ 변수 선언 & 복합연산자 (+=, -=, *= …) ✅
 ```
 ### 연산자
@@ -89,8 +88,8 @@ python_basic/
 ### 조건문 & 반복문
 ```
 ■ 조건문 (if, else, elif, 한 줄 조건문) ✅ 
-□ 반복문 (for, while)
-□ 반복 제어 (break, continue)
+■ 반복문 (for, while)
+■ 반복 제어 (break, continue)
 ```
 ### 함수
 ```
@@ -113,3 +112,12 @@ python_basic/
 ---
 
 > ✅ 표시된 내용은 학습 완료 / ㅁ 표시된 내용은 앞으로 학습할 내용
+
+
+---
+## 💡 배운 점
+
+- Tuple은 변경이 불가능한 자료형으로, 데이터 보호에 유리하다.
+- Set은 중복 제거와 집합 연산에서 매우 유용하다.
+- 자료형 변환은 데이터 처리 과정에서 필수적인 개념이다.
+- 특히 문자열 데이터를 숫자로 변환하는 과정은 실제 프로그램에서 자주 사용된다.
